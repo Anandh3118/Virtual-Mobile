@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="refresh" content="2">
+	<title>CLOCK</title>
+</head>
+<body>
+		<div id="container">
+			<div id="clock">
+				<h1 id="time"></h1>
+				<h2 id="date"></h2>
+			</div>
+		</div>
+
+
+
+
+		<style>
+			body{
+				margin: 0px;
+			}
+			#container{
+				border: 1px solid orange;
+				background-color: black;
+
+				width: 100%;
+				height: 100vh;
+				margin: 0px;
+			}
+			#clock{
+				background-color: whitesmoke;
+				width: 40%;
+				height: 50%;
+				margin: auto;
+				color: red;
+			}
+		</style>
+		<script>
+			let showTime=()=>{
+					let dateobj=new Date();
+					console.log(dateobj);
+					document.querySelector('#time').innerText=dateobj.toLocaleTimeString();
+					document.querySelector('#date').innerText=dateobj.toLocaleDateString();
+		}
+			setInterval(showTime,1000);
+		</script>
+</body>
+</html>
